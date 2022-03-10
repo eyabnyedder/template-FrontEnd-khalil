@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/bootstrap/bootstrap.min.css">
+  	<script src="../JavaScript/bootstrap/bootstrap.js"></script>
+    <link rel="stylesheet" href="styles-util.css">
+    <title>Consultation Utilisateurs</title>
+</head>
+
+<body>
+
+    <!-- Barre de navigation -->
+
+    <nav class="navbar navbar-light bg-light navbar-top navbar-glass">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#invNavBar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="invNavBar" aria-labelledby="invNavBarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title disabled" id="invNavBarLabel">Accueil</h5><br>
+                    <button type="button" class="btn-close text-reset" data-bs-toggle="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/accueil/Accueil.html">
+                               Accueil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Rebriques/GestionRebrique.html">
+                                Gestion des Rubriques
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Banques/Banques.html">
+                                Gestion des Banques
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Colonnes/Colonnes.html">
+                                Gestion des Colonnes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../annexes/Annexes.html">
+                                Gestion des Annexes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
+                                Gestion des Utilisateurs
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../DeclarationsB/DeclarationBanques.html">
+                               Consultation des déclarations des banques résidentes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../Tab-variations/TabVariation.html">
+                               Consultation des tableaux de variations des montants 
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <a class="navbar-brand" href="https://www.bct.gov.tn/bct/siteprod/index.jsp"><img src="../Images/logo.png" alt=""></a>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Compte
+                </button>
+                <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser" data-bs-popper="none">
+                    <div class="bg-white dark__bg-1000 rounded-2 py-2">
+                      <a class="dropdown-item" href="../Profile/Profile.html"><i class="fa fa-eye" aria-hidden="true"></i> Consulter</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Réclamation</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="../Authentification/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- End of barre de navigation -->
+
+    <div class="container">
+        <div class="main-body">
+				<div class="col-sm-9">
+					<input type="button" class="btn btn-primary px-4"  onclick="window.location.href='../Profile/nouveauUtil.html'" value="Ajouter un nouveau utilisateur" style="margin-left: 100%;">
+				</div>
+            <div class="table-responsive">
+                <table class="table" style="margin-top: 20px;">
+                    <caption>Liste des utilisateurs</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col">Début de sessiom</th>
+                        <th scope="col">Fin de session</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>00:00</td>
+                        <td>00:00</td>
+                        <td><td><div class="btn-toolbar" role="toolbar" aria-label="...">
+                            <button class="btn">
+                                <a href="../Profile/Profile_admin.html"><i class="fa fa-eye"></i></a>
+                            </button>
+                            <button class="btn">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div></td></td>  
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>00:00</td>
+                        <td>00:00</td>
+                        <td><td><div class="btn-toolbar" role="toolbar" aria-label="...">
+                            <button class="btn">
+                                <a href="../Profile/Profile_admin.html"><i class="fa fa-eye"></i></a>
+                            </button>
+                            <button class="btn">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div></td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>00:00</td>
+                        <td>00:00</td>
+                        <td><td><div class="btn-toolbar" role="toolbar" aria-label="...">
+                            <button class="btn">
+                                <a href="../Profile/Profile_admin.html"><i class="fa fa-eye"></i></a>
+                            </button>
+                            <button class="btn">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div></td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<style>
+
+body{
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;    
+}
+.main-body {
+    padding: 15px;
+}
+
+a{
+    color: #000;
+}
+
+th,td{
+    text-align: center;
+}
+</style>

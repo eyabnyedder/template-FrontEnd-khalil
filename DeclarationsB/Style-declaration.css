@@ -1,0 +1,54 @@
+/* NavBar without menu */
+
+nav{
+    padding: 2% 1% 2% 1%;
+}
+
+img{
+    width: 50%;
+    height: 20%;
+    margin: 0;    
+}
+
+.navbar-brand{
+    width:50%;
+    text-align: center ;
+
+}
+
+
+form{
+    margin-bottom: 4rem;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.offcanvas-body ul li{
+    margin: 4px;
+}
+
+/* Bouton compte */
+
+.dropdown{
+    margin-right: 3%;
+}
+
+/* footer */
+
+footer{
+    background-color: #e9ecef;
+    color:#63707c;
+    margin-top: 10%;
+    bottom: 0px;
+}
+.footer{
+    
+    bottom: 2%;
+    width: 100%;
+}
+
+.footer-rub{
+    position: relative;
+    bottom: 10%;
+    width: 100%;
+}
