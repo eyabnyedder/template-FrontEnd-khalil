@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/bootstrap/bootstrap.min.css">
   	<script src="../JavaScript/bootstrap/bootstrap.js"></script>
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Consultation Banques</title>
+    <title>Consultation Colonnes</title>
 </head>
 
 <body>
@@ -33,52 +33,55 @@
                         <button class="btn btn-outline-success" type="submit">
                             Search
                         </button>
-                    </form>
+                    </form>                 
+                    
+                    <!-- Les composantes du menu -->
+                    
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/accueil/Accueil.html">
-                               Accueil
+                            <a class="nav-link active" href="../accueil/Accueil.html">
+                                 Accueil
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
-                                 Gestion des Utilisateurs
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Rôles/Rôles.html">
-                                 Gestion des Rôles
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Banques/Banques.html">
-                                Gestion des Banques
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../annexes/PageRefAnnexes.html">
-                                Gestion des Annexes
-                            </a>
-                        </li>
+                          <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
+                               Gestion des Utilisateurs
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../Rôles/Rôles.html">
+                               Gestion des Rôles
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../Banques/Banques.html">
+                               Gestion des Banques
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="../annexes/PageRefAnnexes.html">
+                               Gestion des Annexes
+                          </a>
+                      </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Rebriques/PageRefRebriques.html">
-                                Gestion des Rubriques
+                                 Gestion des Rubriques
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Colonnes/PageRefColonnes.html">
-                                Gestion des Colonnes
+                                 Gestion des Colonnes
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../DeclarationsB/DeclarationBanques.html">
-                               Consultation des déclarations des banques résidentes
+                                 Consultation des déclarations des banques résidentes
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../Tab-variations/TabVariation.html">
-                               Consultation des tableaux de variations des montants 
+                                 Consultation des tableaux de variations des montants 
                             </a>
                         </li>
                         
@@ -92,8 +95,8 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser" data-bs-popper="none">
                     <div class="bg-white dark__bg-1000 rounded-2 py-2">
-                      <a class="dropdown-item" href="../Profile/Profile.html"><i class="fa fa-eye" aria-hidden="true"></i> Consulter</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Réclamation</a>
+                        <a class="dropdown-item" href="../Profile/Profile.html"><i class="fa fa-eye" aria-hidden="true"></i> Consulter</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Réclamation</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="../Authentification/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
                     </div>
@@ -106,118 +109,140 @@
     <!-- End of barre de navigation -->
 
     <div class="container">
-        <div class="main-body">
-				<div class="col-sm-9">
-					<input type="button" class="btn btn-primary px-4" id="btn-open" value="Ajouter une banque" style="margin-left: 105%;">
-				</div>
+      <div class="main-body">
+              <div class="row" style="margin-left: 20px; margin-top: 20px;">
+                  <div class="col-sm-9">
+                      <input type="button" class="btn btn-primary px-4" id="btn-open" value="Ajouter une colonne" style="margin-left: 100%;">
+                  </div>
+              </div>
+  
+              <div class="row mb-3">
+                  <div class="col-sm-3">
+                      <div class="container-fluid" style="text-align: left;">
+                          <span>Choisir une annexe : </span>
+                          <select class="form-select form-select-sm" id="Select-Annexe">
+                              <option value="Tout">- Annexe -</option>
+                              <option value="Actif"></option>
+                              <option value="Actif"></option>
+                              <option value="Passif"></option>
+                              <option value="Passif"></option>
+                              <option value="Passif"></option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-sm-9" style="padding: 20px;">
+                      <button class="btn btn-primary px-4" style="text-align: center;">Filtrer</button>
+                  </div>
+              </div>
+      </div>
             <div class="table-responsive">
                 <table class="table" style="margin-top: 20px;">
-                    <caption>Liste des banques</caption>
+                    <caption>Liste des colonnes</caption>
                     <thead>
                       <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Code</th>
-                        <th scope="col">Abréviation</th>
                         <th scope="col">Libellé</th>
+                        <th scope="col">Code Annexe</th>
                         <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td></td>
                         <td>B1</td>
                         <td></td>
                         <td>Banque 1</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>  
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B2</td>
                         <td></td>
                         <td>Banque 2</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B3</td>
                         <td></td>
                         <td>Banque 3</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B4</td>
                         <td></td>
                         <td>Banque 4</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B5</td>
                         <td></td>
                         <td>Banque 5</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B6</td>
                         <td></td>
                         <td>Banque 6</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B7</td>
                         <td></td>
                         <td>Banque 7</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                           </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B8</td>
                         <td></td>
                         <td>Banque 8</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                           </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B9</td>
                         <td></td>
                         <td>Banque 9</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
                         </td></td>
                       </tr>
                       <tr>
-                        <td></td>
                         <td>B10</td>
                         <td></td>
                         <td>Banque 10</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
@@ -232,7 +257,7 @@
 <div class="modal" id="ModalAjout">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter une banque</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter une colonne</h5>
       </div>
       <div class="modal-body">
         <div class="row mb-3">
@@ -251,14 +276,6 @@
                 <input type="text" class="form-control">
             </div>
         </div>
-	<div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Abréviation</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control">
-            </div>
-        </div>
         <div class="row mb-3">
             <div class="col-sm-3">
                 <h6 class="mb-0">Libellé</h6>
@@ -267,6 +284,19 @@
                 <input type="text" class="form-control">
             </div>
         </div>
+        <hr>
+          <div class="row mb-3">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Annexe</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              <select name="role" id="role-select">
+                <option value="">--Annexe--</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>								
+            </div>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn1 btn-primary">Ajouter</button>
@@ -277,7 +307,7 @@
 <div class="modal" id="ModalModifier">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modifier une banque</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Modifier une colonne</h5>
       </div>
       <div class="modal-body">
         <div class="row mb-3">
@@ -296,14 +326,6 @@
                 <input type="text" class="form-control">
             </div>
         </div>
-	<div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Abréviation</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control">
-            </div>
-        </div>
         <div class="row mb-3">
             <div class="col-sm-3">
                 <h6 class="mb-0">Libellé</h6>
@@ -312,6 +334,19 @@
                 <input type="text" class="form-control">
             </div>
         </div>
+        <hr>
+          <div class="row mb-3">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Annexe</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              <select name="role" id="role-select">
+                <option value="">--Annexe--</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>								
+            </div>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn2 btn-primary">Enregistrer les modifications</button>
@@ -359,4 +394,5 @@ window.onclick = function(event) {
 
     </script>
 
+</body>
 

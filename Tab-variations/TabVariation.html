@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap/bootstrap.min.css">
   	<script src="../JavaScript/bootstrap/bootstrap.js"></script>
-    <link rel="stylesheet" href="Styles-tab.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Consultation Admin</title>
 </head>
 
@@ -42,6 +42,16 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
+                                 Gestion des Utilisateurs
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Rôles/Rôles.html">
+                                 Gestion des Rôles
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="../Rebriques/GestionRebrique.html">
                                  Gestion des Rubriques
                             </a>
@@ -59,11 +69,6 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../annexes/Annexes.html">
                                  Gestion des Annexes
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
-                                 Gestion des Utilisateurs
                             </a>
                         </li>
                         <li class="nav-item">
@@ -102,62 +107,50 @@
     <div id="part1">
         <div class="container" style="margin-top: 20px;">
             <div class="main-body">
-                <div class="row gutters-sm">
-                    <div class="col-md-12">
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="row col-sm-12">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Choisissez une banque :</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <select name="code-banque" id="code-banque">
-                                        <option>--Aucune--</option>
-                                        <option>B1</option>
-                                        <option>B2</option>
-                                        <option>B3</option>
-                                        <option>B4</option>
-                                        <option>B5</option>
-                                        <option>B6</option>
-                                        </select>								
-                                    </div>
-                                </div>
-                                <div class="row col-sm-12" style="margin-top: 20px;">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Début :</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="date" id="Debut">							
-                                    </div>
-                                </div>
-                                <div class="row col-sm-12" style="margin-top: 20px;">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Fin :</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="date" id="fin">								
-                                    </div>
-                                </div>
-                                <div class="row col-sm-12" style="margin-top: 20px;">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Choisissez une annexe :</h6>
-                                    </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <select name="list-annexe" id="list-annexe">
-                                    <option>--Aucune--</option>
-                                    <option>Situation Mensuelle Comptable-Bilan</option>
-                                    <option>Situation Mensuelle Comptable-Hors Bilan</option>
-                                    <option>Etat de Résultat</option>
-                                    </select>								
-                                </div>
-                            </div>
-                            <hr>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <div class="container-fluid" style="text-align: left;">
+                            <span><h6>Choisir une annexe : </h6></span>
+                            <select class="form-select form-select-sm" id="Select-Annexe">
+                                <option value="Tout">- Annexe -</option>
+                                <option value="Actif"></option>
+                                <option value="Actif"></option>
+                                <option value="Passif"></option>
+                                <option value="Passif"></option>
+                                <option value="Passif"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="container-fluid" style="text-align: left;">
+                            <span><h6>Choisir une banque : </h6></span>
+                            <select class="form-select form-select-sm" id="Select-Annexe">
+                                <option value="Tout">- Banque -</option>
+                                <option value="Actif"></option>
+                                <option value="Actif"></option>
+                                <option value="Passif"></option>
+                                <option value="Passif"></option>
+                                <option value="Passif"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="container-fluid">
+                            <span><h6>Choisir une date début : </h6></span>
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="container-fluid">
+                            <span><h6>Choisir une date fin : </h6></span>
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+                </div>
                             <div class="row col-sm-12" style="margin-top: 20px;">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Séléctionnez les rubriques à afficher :</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <div id="menu-deroulant-style-on" style="height: 100px; overflow:auto; border: 1px solid #A0A0A0; padding-left: 10px;">
+                                <div class="container-fluid" style="text-align: left;">
+                                    <span><h6 style="margin-left: 20px;">Choisir les rubriques à afficher : </h6></span>
+                                    <div id="menu-deroulant-style-on" style="height: 100px; overflow:auto; border: 1px solid #A0A0A0; padding-left: 10px; margin-left: 20px;margin-right: 20px;">
                                         <div>
                                             <input type="checkbox" id="cocherTout" onclick="cocherTout(this.checked);" /><label for="cocherTout" > Tout cocher </label>
                                         </div>
@@ -172,13 +165,13 @@
                                         <div class="elmt" ><input type="checkbox" id="checkbox9" class="check"/><label for="checkbox9">Option 9 </label></div>
                                         <div class="elmt" ><input type="checkbox" id="checkbox10" class="check"/><label for="checkbox10">Option 10 </label></div>
                                    
-                                    </div>							
+                                    </div>
                                 </div>
                             </div>
                 
                         </div>
                         <div class="col-sm-12" style="margin-top: 20px;">
-                            <input type="button" class="btn btn-primary px-5"  id="valider" value="Valider" style="margin-left:80%; margin-bottom: 20px;">
+                            <input type="button" class="btn btn-primary px-5"  id="afficher" value="Afficher" style="margin-left:80%; margin-bottom: 20px;">
                         </div>
                     </div>
                 </div>
@@ -186,9 +179,10 @@
         </div>
     </div>
     
-    <div id="part2" style="display: none;">
+    <div id="part2">
         <div class="container" style="margin-top: 20px;">
             <div class="main-body">
+                <hr>
                 <div class="col-sm-9" style="margin-top: 20px; margin-left: 75%;">
                     <input type="button" class="btn btn-primary px-4" id="enreg"  value="Enregistrer">
                     <input type="button" class="btn btn-primary px-4"  id="imp" value="Imprimer">

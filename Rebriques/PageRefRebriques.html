@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
   	<script src="../JavaScript/bootstrap/bootstrap.js"></script>
-    <title>Consultation Utilisateurs</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Consultation rubriques</title>
 </head>
 
 <body>
@@ -33,52 +33,55 @@
                         <button class="btn btn-outline-success" type="submit">
                             Search
                         </button>
-                    </form>
+                    </form>                 
+                    
+                    <!-- Les composantes du menu -->
+                    
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/accueil/Accueil.html">
-                               Accueil
+                            <a class="nav-link active" href="../accueil/Accueil.html">
+                                 Accueil
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
-                                 Gestion des Utilisateurs
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Rôles/Rôles.html">
-                                 Gestion des Rôles
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Banques/Banques.html">
-                                Gestion des Banques
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../annexes/PageRefAnnexes.html">
-                                Gestion des Annexes
-                            </a>
-                        </li>
+                          <a class="nav-link" href="../Utilisateurs/Utilisateurs.html">
+                               Gestion des Utilisateurs
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../Rôles/Rôles.html">
+                               Gestion des Rôles
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../Banques/Banques.html">
+                               Gestion des Banques
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" aria-current="page" href="../annexes/PageRefAnnexes.html">
+                               Gestion des Annexes
+                          </a>
+                      </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Rebriques/PageRefRebriques.html">
-                                Gestion des Rubriques
+                                 Gestion des Rubriques
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../Colonnes/PageRefColonnes.html">
-                                Gestion des Colonnes
+                                 Gestion des Colonnes
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../DeclarationsB/DeclarationBanques.html">
-                               Consultation des déclarations des banques résidentes
+                                 Consultation des déclarations des banques résidentes
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../Tab-variations/TabVariation.html">
-                               Consultation des tableaux de variations des montants 
+                                 Consultation des tableaux de variations des montants 
                             </a>
                         </li>
                         
@@ -92,8 +95,8 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser" data-bs-popper="none">
                     <div class="bg-white dark__bg-1000 rounded-2 py-2">
-                      <a class="dropdown-item" href="../Profile/Profile.html"><i class="fa fa-eye" aria-hidden="true"></i> Consulter</a>
-                      <a class="dropdown-item" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Réclamation</a>
+                        <a class="dropdown-item" href="../Profile/Profile.html"><i class="fa fa-eye" aria-hidden="true"></i> Consulter</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Réclamation</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="../Authentification/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
                     </div>
@@ -107,17 +110,23 @@
 
     <div class="container">
         <div class="main-body">
-				<div class="col-sm-9" style="margin-top: 20px;">
-					<input type="button" class="btn btn-primary px-4" id="btn-open" value="Ajouter un utilisateur" style="margin-left: 100%;">
-				</div>
+                <div class="row" style="margin-left: 20px; margin-top: 20px;">
+                    <div class="col-sm-9">
+                        <input type="button" class="btn btn-primary px-4" id="btn-open" value="Ajouter une rubrique" style="margin-left: 100%;">
+                    </div>
+                </div>
+    
                 <div class="row mb-3">
                     <div class="col-sm-3">
                         <div class="container-fluid" style="text-align: left;">
-                            <span>Choisir un rôle : </span>
-                            <select class="form-select form-select-sm" id="role-select">
-                                <option value="Tout">- Rôle -</option>
-                                <option value="Administrateur">Administrateur</option>
-                                <option value="Superviseur">Superviseur</option>
+                            <span>Choisir une annexe : </span>
+                            <select class="form-select form-select-sm" id="Select-Annexe">
+                                <option value="Tout">- Annexe -</option>
+                                <option value="Actif"></option>
+                                <option value="Actif"></option>
+                                <option value="Passif"></option>
+                                <option value="Passif"></option>
+                                <option value="Passif"></option>
                             </select>
                         </div>
                     </div>
@@ -125,46 +134,39 @@
                         <button class="btn btn-primary px-4" style="text-align: center;">Filtrer</button>
                     </div>
                 </div>
+        </div>
+
             <div class="table-responsive">
                 <table class="table" style="margin-top: 20px;">
-                    <caption>Liste des utilisateurs</caption>
+                    <caption>Liste des rubriques</caption>
                     <thead>
                       <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prénom</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Matricule</th>
-                        <th scope="col">Mot de passe</th>
-                        <th scope="col">Département</th>
-                        <th scope="col">Rôle</th>
+			            <th scope="col">ID</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Libellé</th>
+                        <th scope="col">Ordre d'édition</th>
+			            <th scope="col">Code Annexe</th>
                         <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td></td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>0000</td>
-                        <td>0000</td>
-                        <td>0000</td>
-                        <td>0000</td>
-                        <td>0000</td>
+			            <td></td>
+                        <td>PR12149</td>
+                        <td>Autres crédits à long terme</td>
+                        <td>28</td>
+			            <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
-                        </td></td> 
+                        </td></td>  
                       </tr>
                       <tr>
-                        <td></td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>0000</td>
-                        <td>0000</td>
-                        <td>0000</td>
-                        <td>00:00</td>
-                        <td>00:00</td>
+			            <td></td>
+                        <td>PR122</td>
+                        <td>Comptes courants débiteurs</td>
+                        <td>29</td>
+			            <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
@@ -172,13 +174,10 @@
                       </tr>
                       <tr>
                         <td></td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>***************************</td>
-                        <td>0000</td>
-                        <td>0000</td>
-                        <td>00:00</td>
-                        <td>00:00</td>
+                        <td>PR123</td>
+                        <td>Financement leasing</td>
+                        <td>30</td>
+                        <td></td>
                         <td><td>
                             <button class="btn fa fa-gear modif" id="btn-modif"></button>
                             <button class="btn fa fa-trash"></button>
@@ -189,11 +188,11 @@
               </div>
         </div>
     </div>
-
+</div>
 <div class="modal" id="ModalAjout">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter un utilisateur</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Ajouter une rubrique</h5>
       </div>
       <div class="modal-body">
         <div class="row mb-3">
@@ -206,15 +205,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-sm-3">
-                <h6 class="mb-0">Nom</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control">
-            </div>
-        </div>
-	<div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Prénom</h6>
+                <h6 class="mb-0">Code</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                 <input type="text" class="form-control">
@@ -222,7 +213,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-sm-3">
-                <h6 class="mb-0">Email</h6>
+                <h6 class="mb-0">Libellé</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                 <input type="text" class="form-control">
@@ -230,44 +221,25 @@
         </div>
 	<div class="row mb-3">
             <div class="col-sm-3">
-                <h6 class="mb-0">Matricule</h6>
+                <h6 class="mb-0">Ordre d'édition</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                 <input type="text" class="form-control">
             </div>
         </div>
-	<div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Mot de passe</h6>
+        <hr>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Annexe</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <select name="role" id="role-select">
+                        <option value="">- Annexe -</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>								
+                </div>
             </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control">
-            </div>
-        </div>
-	<hr>
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Département</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <select name="dep" id="dep-select">
-                                    <option value="">--Aucun--</option>
-                                </select>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Rôle</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <select name="role" id="role-select">
-                                    <option value="">--Aucun--</option>
-                                    <option value="Admin">Administrateur</option>
-                                    <option value="Super">Superviseur</option>
-                                </select>								
-                            </div>
-                        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn1 btn-primary">Ajouter</button>
@@ -278,7 +250,7 @@
 <div class="modal" id="ModalModifier">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modifier un utilisateur</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Modifier une rubrique</h5>
       </div>
       <div class="modal-body">
         <div class="row mb-3">
@@ -291,15 +263,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-sm-3">
-                <h6 class="mb-0">Nom</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control">
-            </div>
-        </div>
-	<div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Prénom</h6>
+                <h6 class="mb-0">Code</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                 <input type="text" class="form-control">
@@ -307,14 +271,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-sm-3">
-                <h6 class="mb-0">Email</h6>
-            </div>
-            <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control">
-            </div>
-        </div><div class="row mb-3">
-            <div class="col-sm-3">
-                <h6 class="mb-0">Matricule</h6>
+                <h6 class="mb-0">Libellé</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                 <input type="text" class="form-control">
@@ -322,36 +279,25 @@
         </div>
 	<div class="row mb-3">
             <div class="col-sm-3">
-                <h6 class="mb-0">Mot de passe</h6>
+                <h6 class="mb-0">Ordre d'édition</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                 <input type="text" class="form-control">
             </div>
         </div>
-	<hr>
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Département</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <select name="dep" id="dep-select">
-                                    <option value="">--Aucun--</option>
-                                </select>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Rôle</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <select name="role" id="role-select">
-                                    <option value="">--Aucun--</option>
-                                    <option value="Admin">Administrateur</option>
-                                    <option value="Super">Superviseur</option>
-                                </select>								
-                            </div>
-                        </div>
+        <hr>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Annexe</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <select name="role" id="role-select">
+                        <option value="">- Annexe -</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>								
+                </div>
+            </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn2 btn-primary">Enregistrer les modifications</button>
@@ -360,9 +306,7 @@
 </div>
 
 </body>
-
 </html>
-
 
     <script>
         // Get the modal
@@ -372,6 +316,8 @@ let modal2 = document.getElementById("ModalModifier");
 // Get the button that opens the modal
 let btn1 = document.getElementById("btn-open");
 let btn2 = document.getElementsByClassName("modif");
+let close1 = document.getElementById("close1");
+let close2 = document.getElementById("close2");
 
 // When the user clicks on the button, open the modal
 btn1.onclick = function() {
@@ -397,3 +343,5 @@ window.onclick = function(event) {
 }
 
     </script>
+
+</body>
